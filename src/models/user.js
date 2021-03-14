@@ -59,6 +59,7 @@ userSchema.methods.generateAuthToken = async function () {
     return token
 }
 
+// hide password and tokens in response
 userSchema.methods.toJSON = function () {
     const user = this
     const userObject = user.toObject()
